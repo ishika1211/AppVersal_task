@@ -15,3 +15,5 @@ or
 2. Run the project
 
 `npm run start`
+
+Note: Don't forgot to run `export NODE_OPTIONS="--openssl-legacy-provider"` before running if you are using NODE version 17x+
