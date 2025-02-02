@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 // Stories viewer component that shows story groups and handles story viewing
 const StoriesComponent = () => {
-  const [data, setData] = useState({
+  const [data] = useState({
     id: "3adb0aa2-4387-4fab-a8ed-4c38fc2334e4",
     campaign_type: "STR",
     details: [
@@ -198,33 +198,65 @@ const StoriesComponent = () => {
 
   const [activeStory, setActiveStory] = useState(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Open story modal
   const openStory = (story) => {
     setActiveStory(story);
     setActiveSlideIndex(0);
+    setIsModalOpen(true);
   };
 
   // Close story modal
-  const closeStory = () => {
+  const closeStory = useCallback(() => {
+    setIsModalOpen(false);
     setActiveStory(null);
     setActiveSlideIndex(0);
-  };
+  }, []);
 
   // Navigate between slides
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     if (activeStory && activeSlideIndex < activeStory.slides.length - 1) {
       setActiveSlideIndex((prev) => prev + 1);
     } else {
       closeStory();
     }
-  };
+  }, [activeStory, activeSlideIndex, closeStory]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     if (activeSlideIndex > 0) {
       setActiveSlideIndex((prev) => prev - 1);
     }
-  };
+  }, [activeSlideIndex]);
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (isModalOpen) {
+        if (event.key === "ArrowRight") {
+          nextSlide();
+        } else if (event.key === "ArrowLeft") {
+          prevSlide();
+        } else if (event.key === "Escape") {
+          closeStory();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isModalOpen, nextSlide, prevSlide, closeStory]);
+
+  // Auto-advance slides after a delay
+  useEffect(() => {
+    if (isModalOpen && activeStory) {
+      const timer = setTimeout(() => {
+        nextSlide();
+      }, 5000); // Change slide every 5 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [isModalOpen, activeSlideIndex, activeStory, nextSlide]);
 
   return (
     <div className="w-full">
@@ -261,31 +293,31 @@ const StoriesComponent = () => {
       </div>
 
       {/* Story Modal */}
-      {activeStory && (
+      {isModalOpen && activeStory && (
         <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
           {/* Close Button */}
           <button
             onClick={closeStory}
-            className="absolute top-4 right-4 text-white z-10"
+            className="absolute top-4 right-4 text-white z-10 p-2 bg-black bg-opacity-50 rounded-full hover:bg-opacity-75 transition-all"
           >
-            <X size={24} />
+            <X size={32} />
           </button>
 
           {/* Navigation Buttons */}
           {activeSlideIndex > 0 && (
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white z-10"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white z-10 p-2 bg-black bg-opacity-50 rounded-full hover:bg-opacity-75 transition-all"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft size={32} />
             </button>
           )}
           {activeSlideIndex < activeStory.slides.length - 1 && (
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white z-10"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white z-10 p-2 bg-black bg-opacity-50 rounded-full hover:bg-opacity-75 transition-all"
             >
-              <ChevronRight size={24} />
+              <ChevronRight size={32} />
             </button>
           )}
 
