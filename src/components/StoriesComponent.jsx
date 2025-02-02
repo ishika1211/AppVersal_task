@@ -62,7 +62,7 @@ const StoriesComponent = () => {
             id: "7d945e48-3d3f-4a74-bd04-0b2296bbb9ea",
             parent: "2f143cc1-93f8-4b3b-a23c-b2836b79cd25",
             image:
-              "http://pluspng.com/img-png/apple-ios-logo-png-ios-logo-icon-1600.png",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOplEtTQI_PLtbN97VTw2hJrLG7u3sbhTu0Q&s",
             video: null,
             link: "https://app20.in/ios",
             button_text: "iOS Offer",
@@ -72,7 +72,7 @@ const StoriesComponent = () => {
             id: "59feb0e4-68ce-4c6a-a2b6-c34eb82322b4",
             parent: "2f143cc1-93f8-4b3b-a23c-b2836b79cd25",
             image:
-              "https://appstorysmediabucket.s3.amazonaws.com/story_slides/WhatsApp_Image_2025-01-10_at_13.01.31_7eadf664.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2UC3EJVDHJBIHV3T%2F20250118%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20250118T061304Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=dccdf4ce1d64440ed0dc04a570a5ece530e48398c6fa28ef8ee878b63064baf2",
+              "https://images.cnbctv18.com/uploads/2024/09/ios-18-2024-09-3a438036c2e92c564fca363fbee9c0f2.jpg?impolicy=website&width=400&height=225",
             video: null,
             link: "https://app20.in/ios/1",
             button_text: "iOS Offer 1",
@@ -82,7 +82,7 @@ const StoriesComponent = () => {
             id: "45f756ed-7eaf-45ca-b057-dcd784f8909f",
             parent: "2f143cc1-93f8-4b3b-a23c-b2836b79cd25",
             image:
-              "https://appstorysmediabucket.s3.amazonaws.com/story_slides/WhatsApp_Image_2025-01-10_at_13.01.32_290dca51.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2UC3EJVDHJBIHV3T%2F20250118%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20250118T061304Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=60bc4df2c0c4b873ddf007ffc8c650bed4c78a65e04f468f1f432f28f7c2aa36",
+              "https://images.news18.com/ibnlive/uploads/2024/06/ios-18-features-android-has-2024-06-62e9b98f29addc89823a977da7400d58-3x2.jpg",
             video: null,
             link: "https://app20.in/ios/2",
             button_text: "iOS Offer 2",
@@ -92,7 +92,7 @@ const StoriesComponent = () => {
             id: "d9825fb3-0fa3-4db9-9801-e044c7936172",
             parent: "2f143cc1-93f8-4b3b-a23c-b2836b79cd25",
             image:
-              "https://appstorysmediabucket.s3.amazonaws.com/story_slides/WhatsApp_Image_2025-01-10_at_13.01.32_a5975c0b.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2UC3EJVDHJBIHV3T%2F20250118%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20250118T061304Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=92f3e4f26432077aa93f5995ac5f34c1ad6372ac612eaa5a043d4ee98711a4f3",
+              "https://www.apple.com/newsroom/images/2024/06/ios-18-makes-iphone-more-personal-capable-and-intelligent-than-ever/article/Apple-WWDC24-iOS-18-Home-Screen-larger-app-icons-240610_inline.jpg.large.jpg",
             video: null,
             link: "https://app20.in/ios/4",
             button_text: "iOS Offer 4",
@@ -102,7 +102,7 @@ const StoriesComponent = () => {
             id: "5b8043ab-2297-459d-8648-85a06b18920b",
             parent: "2f143cc1-93f8-4b3b-a23c-b2836b79cd25",
             image:
-              "https://appstorysmediabucket.s3.amazonaws.com/story_slides/WhatsApp_Image_2025-01-10_at_13.01.32_a4080dd0.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2UC3EJVDHJBIHV3T%2F20250118%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20250118T061304Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=f62480069edc2c1e419af9e0b05111493520ff34d460788af6e7b4a86ecd9c25",
+              "https://www.cwstechnology.com/wp-content/uploads/2024/07/iOS-vs-Android.png",
             video: null,
             link: "https://app20.in/ios/5",
             button_text: "iOS Offer 5",
@@ -112,7 +112,7 @@ const StoriesComponent = () => {
             id: "39a3fba9-7527-49f4-a8ab-bbc932a373df",
             parent: "2f143cc1-93f8-4b3b-a23c-b2836b79cd25",
             image:
-              "https://appstorysmediabucket.s3.amazonaws.com/story_slides/WhatsApp_Image_2025-01-10_at_13.01.32_e8af568d.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2UC3EJVDHJBIHV3T%2F20250118%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20250118T061304Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=e576ebea880eada650822b4d8a2681c63298b9d5a43a9e98bee0c0b100b8407e",
+              "https://i.redd.it/bsk6ntc2mjfe1.jpeg",
             video: null,
             link: "https://app20.in/ios/6",
             button_text: "iOS Offer 6",
